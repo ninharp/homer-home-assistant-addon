@@ -1,0 +1,24 @@
+---
+name: Homer
+version: dev
+slug: homer
+url: https://homer-demo.netlify.app/
+init: false
+description: A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
+webui: http://[HOST]:[PORT:8005]
+stage: experimental
+arch:
+  - amd64
+ports:
+  80/tcp: 8005
+ports_description:
+  80/tcp: Web interface
+map:
+  - share:rw
+options:
+  PUID: 1001
+  PGID: 1001
+schema:
+  PUID: int
+  PGID: int
+  TZ: str?
